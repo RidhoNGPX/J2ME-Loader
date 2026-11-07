@@ -33,10 +33,10 @@ jobs:
       - name: Build Debug APK
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleOpenDebug --no-daemon
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: j2me-loader-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
+          path: app/build/outputs/apk/open/debug/*.apk
